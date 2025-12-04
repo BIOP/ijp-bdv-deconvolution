@@ -1,27 +1,16 @@
 package ch.epfl.biop.ij2command;
 
-import bdv.util.BdvFunctions;
-import bdv.util.BdvStackSource;
 import bdv.viewer.SourceAndConverter;
 import ch.epfl.biop.DatasetHelper;
 import ch.epfl.biop.bdv.img.bioformats.command.CreateBdvDatasetBioFormatsCommand;
 import ch.epfl.biop.scijava.command.spimdata.LLS7OpenDatasetCommand;
-import ch.epfl.biop.sourceandconverter.Deconvolver;
 import net.haesleinhuepf.clij.CLIJ;
-import net.haesleinhuepf.clij.clearcl.backend.jocl.ClearCLBackendJOCL;
-import net.haesleinhuepf.clij2.CLIJ2;
 import net.haesleinhuepf.clijx.plugins.clij2fftWrapper;
-import net.imagej.Dataset;
 import net.imagej.ImageJ;
-import net.imglib2.RandomAccessibleInterval;
-import net.imglib2.type.numeric.integer.UnsignedShortType;
-import net.imglib2.type.numeric.real.FloatType;
-import net.imglib2.view.Views;
 import org.apache.commons.io.FilenameUtils;
 import sc.fiji.bdvpg.scijava.services.SourceAndConverterService;
 
 import java.io.File;
-import java.io.IOException;
 
 public class SimpleIJLaunch {
 

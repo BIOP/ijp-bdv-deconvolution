@@ -24,6 +24,12 @@ public class SourcesDeconvolverCommand implements BdvPlaygroundActionCommand {
     @Parameter(label = "Select PSF (one for all sources)")
     SourceAndConverter<?> psf;
 
+    final public static String ORIGINAL = "Keep Pixel Type Of Original Image";
+    final public static String FLOAT = "Float";
+
+    @Parameter(label = "Deconvolved Image Pixel Type", choices = {ORIGINAL, FLOAT})
+    String output_pixel_type;
+
     @Parameter(label = "Source Name Suffix")
     String suffix = "_deconvolved";
 
@@ -86,19 +92,33 @@ public class SourcesDeconvolverCommand implements BdvPlaygroundActionCommand {
                                 .nonCirculant(non_circulant)
                                 .numberOfIterations(num_iterations)
                                 .psf(psfRAI)
-                                .overlap(overlap_size)
+                                .overlap(overlap_size, overlap_size, overlap_size)
                                 .regularizationFactor(regularization_factor);
 
-                for (int i = 0;i< sacs.length; i++) {
-
-                    sacs_out[i] = Deconvolver.getDeconvolved(
-                            (SourceAndConverter) sacs[i],
-                            sacs[i].getSpimSource().getName()+suffix,
-                            new int[]{block_size_x, block_size_y, block_size_z},
-                            builder,
-                            new SharedQueue(n_threads,1)
+                switch (output_pixel_type) {
+                    case FLOAT:
+                        for (int i = 0;i< sacs.length; i++) {
+                            sacs_out[i] = Deconvolver.getDeconvolved(
+                                    (SourceAndConverter) sacs[i],
+                                    sacs[i].getSpimSource().getName()+suffix,
+                                    new int[]{block_size_x, block_size_y, block_size_z},
+                                    builder,
+                                    new SharedQueue(n_threads,1)
                             );
+                        } break;
+                    case ORIGINAL:
+                        for (int i = 0;i< sacs.length; i++) {
+                            sacs_out[i] = Deconvolver.getDeconvolvedCast(
+                                    (SourceAndConverter) sacs[i],
+                                    sacs[i].getSpimSource().getName()+suffix,
+                                    new int[]{block_size_x, block_size_y, block_size_z},
+                                    builder,
+                                    new SharedQueue(n_threads,1)
+                            );
+                        }break;
+                    default:throw new RuntimeException("Unrecognized output pixel type "+output_pixel_type);
                 }
+
 
         if (nMipmapLevels>1) {
             System.out.println("The original image has multiresolution levels, all resolution levels will be discarded and recomputed");

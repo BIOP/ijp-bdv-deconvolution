@@ -89,8 +89,8 @@
 		<!-- <scijava.app.subdirectory>plugins/BIOP</scijava.app.subdirectory> -->
 
 		<!-- package version below are determined by the parent pom but need to be upgraded or temporarily fixed for bugs -->
-		<clij2-fft_.version>2.2.0.18-SNAPSHOT</clij2-fft_.version>
-		<bigdataviewer-biop-tools.version>0.13.4</bigdataviewer-biop-tools.version>
+		<clij2-fft_.version>2.2.0.22</clij2-fft_.version>
+		<bigdataviewer-biop-tools.version>0.13.5</bigdataviewer-biop-tools.version>
 		<quick-start-czi-reader.version>0.2.6</quick-start-czi-reader.version>
 		<bigdataviewer-playground.version>0.12.0</bigdataviewer-playground.version>
 	</properties>
