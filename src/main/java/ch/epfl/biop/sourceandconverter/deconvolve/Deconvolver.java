@@ -1,8 +1,9 @@
-package ch.epfl.biop.sourceandconverter;
+package ch.epfl.biop.sourceandconverter.deconvolve;
 
 import bdv.cache.SharedQueue;
 import bdv.util.source.process.VoxelProcessedSource;
 import bdv.viewer.SourceAndConverter;
+import ch.epfl.biop.sourceandconverter.SourceVoxelProcessor;
 import net.haesleinhuepf.clijx.imglib2cache.Clij2RichardsonLucyImglib2Cache;
 import net.imglib2.RandomAccessibleInterval;
 import net.imglib2.cache.Cache;

@@ -64,25 +64,24 @@
 	</mailingLists>
 
 	<scm>
-		<connection>scm:git:git:https://github.com/BIOP/ijp-template-ij2</connection>
-		<developerConnection>scm:git:git@github.com:BIOP/ijp-template-ij2</developerConnection>
+		<connection>scm:git:git:https://github.com/BIOP/ijp-bdv-deconvolution</connection>
+		<developerConnection>scm:git:git@github.com:BIOP/ijp-bdv-deconvolution</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://github.com/BIOP/ijp-template-ij2</url>
+		<url>https://github.com/BIOP/ijp-bdv-deconvolution</url>
 	</scm>
 	
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/BIOP/ijp-template-ij2/issues</url>
+		<url>https://github.com/BIOP/ijp-bdv-deconvolution/issues</url>
 	</issueManagement>
-
 
 	<ciManagement>
 		<system>None</system>
 	</ciManagement>
 
 	<properties>
-		<package-name>ch.epfl.biop.ij2command</package-name>
-		<main-class>ch.epfl.biop.ij2command.DummyCommand</main-class>
+		<package-name>ch.epfl.biop.sourceandconverter.deconvolve</package-name>
+		<main-class>ch.epfl.biop.scijava.command.source.deconvolve.DummyCommand</main-class>
 		<license.licenseName>mit</license.licenseName>
 		<license.copyrightOwners>EPFL</license.copyrightOwners>
 		<!-- <scijava.app.directory>C:/Fiji_template</scijava.app.directory> -->

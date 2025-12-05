@@ -2,7 +2,7 @@ package ch.epfl.biop.scijava.command.source.deconvolve;
 
 import bdv.cache.SharedQueue;
 import bdv.viewer.SourceAndConverter;
-import ch.epfl.biop.sourceandconverter.Deconvolver;
+import ch.epfl.biop.sourceandconverter.deconvolve.Deconvolver;
 import ch.epfl.biop.sourceandconverter.SourceHelper;
 import net.haesleinhuepf.clijx.imglib2cache.Clij2RichardsonLucyImglib2Cache;
 import net.imglib2.RandomAccessibleInterval;
