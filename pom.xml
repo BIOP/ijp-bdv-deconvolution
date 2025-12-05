@@ -92,6 +92,9 @@
 		<bigdataviewer-biop-tools.version>0.13.6</bigdataviewer-biop-tools.version>
 		<quick-start-czi-reader.version>0.2.6</quick-start-czi-reader.version>
 		<bigdataviewer-playground.version>0.12.0</bigdataviewer-playground.version>
+
+		<!-- NB: Deploy releases to the SciJava Maven repository. -->
+		<releaseProfiles>sign,deploy-to-scijava</releaseProfiles>
 	</properties>
 
 	<repositories>
