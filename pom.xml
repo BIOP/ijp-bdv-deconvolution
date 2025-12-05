@@ -16,7 +16,7 @@
 	<artifactId>ijp-bdv-deconvolution</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 
-	<name>Biop Dummy Command</name>
+	<name>BDV Deconvolution</name>
 	<description>Tiled GPU Deconvolution for BigDataViewer-Playground - BIOP - EPFL</description>
 	<url>http://biop.epfl.ch</url>
 	<inceptionYear>2024</inceptionYear>
