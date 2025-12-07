@@ -4,7 +4,10 @@
 
 A high-performance ImageJ plugin for GPU-accelerated Richardson-Lucy deconvolution of large microscopy images using [BigDataViewer-Playground](https://github.com/bigdataviewer/bigdataviewer-playground) and [CLIJ2](https://github.com/clij/clij2), built on top of [CLIJ-FFT](https://github.com/clij/clij2-fft/).
 
-[![Deconvolution demo video]](./asset/deconv-demo.mp4)
+<video width="600" controls>
+  <source src="./asset/deconv-demo.mp4" type="video/mp4">
+  Deconvolution demo video
+</video>
 
 ## Overview
 
