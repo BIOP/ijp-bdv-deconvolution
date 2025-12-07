@@ -2,9 +2,9 @@
 
 [![Build Status](https://github.com/BIOP/ijp-bdv-deconvolution/actions/workflows/build.yml/badge.svg)](https://github.com/BIOP/ijp-bdv-deconvolution/actions/workflows/build.yml)
 
-A high-performance ImageJ plugin for GPU-accelerated Richardson-Lucy deconvolution of large microscopy images using [BigDataViewer-Playground](https://github.com/bigdataviewer/bigdataviewer-playground) and [CLIJ2](https://github.com/clij/clij2).
+A high-performance ImageJ plugin for GPU-accelerated Richardson-Lucy deconvolution of large microscopy images using [BigDataViewer-Playground](https://github.com/bigdataviewer/bigdataviewer-playground) and [CLIJ2](https://github.com/clij/clij2), built on top of [CLIJ-FFT](https://github.com/clij/clij2-fft/).
 
-It is built on top of [CLIJ-FFT](https://github.com/clij/clij2-fft/).
+[![Deconvolution demo video]](./asset/deconv-demo.mp4)
 
 ## Overview
 
